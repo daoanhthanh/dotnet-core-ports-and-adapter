@@ -60,11 +60,11 @@ public class Startup(IConfiguration configuration, IWebHostEnvironment env)
         });
 
         // ----- Add ApiExplorer to discover versions -----
-        // services.AddVersionedApiExplorer(setup =>
-        // {
-        //     setup.GroupNameFormat = "'v'VVV";
-        //     setup.SubstituteApiVersionInUrl = true;
-        // });
+        services.AddVersionedApiExplorer(setup =>
+        {
+            setup.GroupNameFormat = "'v'VVV";
+            setup.SubstituteApiVersionInUrl = true;
+        });
 
         services.AddEndpointsApiExplorer();
         
